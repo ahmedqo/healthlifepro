@@ -9,10 +9,10 @@
                                 <img src="{{ asset('img/logo.webp') }}?v={{ env('APP_VERSION') }}"
                                     alt="health-life-pro-logo" class="block w-full" />
                             </a>
-                            <p class="text-x-white text-base">
+                            <p class="text-x-white text-base text-justify">
                                 {{ __('HEALTH LIFE PRO excels as a medical equipment expert, serving both healthcare professionals and individuals. We specialize in selecting and distributing products from top brands, providing the opportunity for professionals to excel in their field or individuals to maintain their health with high-quality equipment at favorable rates') }}
                             </p>
-                            <ul class="flex gap-4 items-center mt-4 flex-wrap">
+                            <ul class="flex gap-4 items-center mx-auto flex-wrap">
                                 @if (env('LINK_WHATSAPP_FOO'))
                                     <li>
                                         <a href="{{ env('LINK_WHATSAPP_FOO') }}" class="flex text-x-prime text-sm">

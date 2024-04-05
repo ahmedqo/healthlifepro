@@ -1203,6 +1203,10 @@ video {
   scroll-behavior: smooth;
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
 .break-words {
   overflow-wrap: break-word;
 }
@@ -1588,6 +1592,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-start {

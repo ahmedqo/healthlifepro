@@ -94,7 +94,7 @@ class AuthController extends Controller
             ]);
         }
 
-        $row = DB::table('password_resets')->where('token', $token)->first();
+        $row = DB::table('password_reset_tokens')->where('token', $token)->first();
 
         if (!$row) {
             return Redirect::back()->withInput()->with([
@@ -119,7 +119,7 @@ class AuthController extends Controller
             ]);
         }
 
-        DB::table('password_resets')->where('token', $token)->delete();
+        DB::table('password_reset_tokens')->where('token', $token)->delete();
         $user->password = Hash::make($Request->new_password);
         $user->save();
 
