@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+:root {
+    /** */
+    --prime: 2 201 59;
+    --acent: 25 254 161;
+    --prime: 54 226 246;
+    --acent: 123 209 167;
+    /** */
+    --black: 29 29 29;
+    --white: 254 254 254;
+    --light: 245 245 245;
+    --shade: 209 209 209;
+    --r-thin: 4px;
+    --r-huge: 6px;
+    --w-thin: 600;
+    --w-huge: 700;
+    --shadow: 0px 10px 10px -12px rgb(var(--black) / .5);
+    /** */
+    --color-sys-0: #94A3B8;
+    --color-sys-1: #78716C;
+    --color-sys-2: #1F2937;
+    /** */
+    --color-0: #458cfe;
+    --color-1: #8B5CF6;
+    --color-2: #06B6D4;
+    --color-3: #22C55E;
+    --color-4: #EAB308;
+    --color-5: #EC4899;
+    --color-6: #EF4444;
+    --color-7: #14B8A6;
+    --color-8: #F97316;
+    --color-9: #F43F5E;
+}
+
+*,
+*::after,
+*::before {
+    font-family: Montserrat, sans-serif;
+}
+
+html[lang="ar"] *,
+html[lang="ar"] *::after,
+html[lang="ar"] *::before {
+    font-family: 'Cairo', sans-serif;
+}
+
+::-webkit-search-cancel-button,
+ ::-webkit-inner-spin-button,
+ ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+input {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+body[close] {
+    height: 100dvh;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+os-text,
+os-area,
+os-date,
+os-select,
+os-search,
+os-filter,
+os-password,
+os-select::part(search),
+os-switch::part(toggle) {
+    background: transparent;
+    border: 1px solid rgb(var(--black));
+}
+
+os-button:not([outlined]),
+os-topbar:not([transparent]) {
+    background-color: rgb(var(--prime));
+}
+
+os-button {
+    border: 1px solid rgb(var(--prime));
+}
+
+os-button:hover,
+os-button:focus,
+os-button:focus-within {
+    border-color: rgb(var(--prime) / .4);
+    background-color: rgb(var(--prime) / .4);
+}
+
+os-text,
+os-area,
+os-date,
+os-toast,
+os-select,
+os-search,
+os-filter,
+os-password,
+os-date::part(content),
+os-select::part(search),
+os-modal::part(content),
+os-select::part(content),
+os-filter::part(content),
+os-dropdown::part(content) {
+    border-radius: var(--r-thin);
+}
+
+os-date::part(content),
+os-modal::part(content),
+os-select::part(content),
+os-filter::part(content),
+os-navbar::part(content),
+os-dropdown::part(content) {
+    box-shadow: var(--shadow);
+}
+
+os-switch::part(ground) {
+    border: 1px solid rgb(var(--black));
+}
+
+os-switch:not([checked])::part(ground) {
+    background: transparent;
+}
+
+os-switch::part(toggle) {
+    background: rgb(var(--white));
+}
+
+os-search {
+    padding: .35rem;
+}
+
+os-search::part(field) {
+    padding: 0;
+}
+
+os-filter::part(content) {
+    outline: 1px solid rgb(var(--shade) / .5);
+}
+
+@media (min-width: 1024px) {
+    os-dropdown.W140::part(modal) {
+        min-width: 140px;
+    }
+    os-dropdown.W160::part(modal) {
+        min-width: 160px;
+    }
+    os-date::part(content),
+    os-modal::part(content),
+    os-select::part(content),
+    os-navbar::part(content),
+    os-dropdown::part(content) {
+        outline: 1px solid rgb(var(--shade) / .5);
+    }
+    os-dropdown.sharp::part(content) {
+        max-height: max-content;
+    }
+    os-modal::part(content) {
+        max-width: 400px;
+    }
+}
+
+.bg-x-core {
+    --tw-gradient-stops: rgb(var(--acent)), rgb(var(--prime));
+}
+
+.bg-x-core:not(.no-action):hover,
+.bg-x-core:not(.no-action):focus,
+.bg-x-core:not(.no-action):focus-within {
+    --tw-gradient-stops: rgb(var(--prime)), rgb(var(--acent));
+}
+
+.text-x-core {
+    background-image: linear-gradient(to bottom right, rgb(var(--prime)), rgb(var(--acent)));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+ :is([dir="rtl"] .text-x-core) {
+    background-image: linear-gradient(to bottom left, rgb(var(--prime)), rgb(var(--acent)));
+}
+
+.tox-tinymce {
+    background-color: rgb(var(--light)) !important;
+    border: 1px solid rgb(var(--black)) !important;
+    border-radius: var(--r-thin) !important;
+}
+
+.tox-editor-header {
+    background: rgb(var(--light)) !important;
+    box-shadow: unset !important;
+    padding: 0 !important;
+    z-index: 0 !important;
+}
+
+.tox-editor-header,
+.tox-edit-area__iframe {
+    background: rgb(var(--white)) !important;
+}
+
+.tox-editor-header {
+    border-bottom: 1px solid rgb(var(--black)) !important;
+}
+
+.tox-tbtn--select.tox-tbtn--bespoke:hover,
+.tox-tbtn--select.tox-tbtn--bespoke:focus,
+.tox-tbtn--select.tox-tbtn--bespoke:focus-within {
+    background: #cce2fa !important;
+}
+
+.tox-editor-header>div,
+.tox-editor-header [role="group"] {
+    background: transparent !important;
+}
+
+.tox-notifications-container,
+.tox-bottom-anchorbar,
+.tox-promotion,
+.tox-statusbar {
+    position: fixed !important;
+    display: none !important;
+    left: -9999px !important;
+    top: -9999px !important;
+}
+
+.scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background: transparent;
+    -moz-appearance: none;
+    appearance: none;
+    height: 4px;
+    width: 4px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: rgb(209 213 219 / 1);
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(156 163 175 / 1);
+}
+
+.x-revert * {
+    all: revert;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.x-category .x-category {
+    display: none;
+}
+
+.x-category .x-category-open,
+.x-category li:hover>.x-category,
+.x-category .x-category-before::before,
+.x-category li:focus-within>.x-category,
+.x-category .x-category a:hover+.x-category::before,
+.x-category .x-category a:focus-within+.x-category::before {
+    display: block;
+}
+
+.truncate-x-core {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.search:focus>svg,
+.search:focus-within>svg {
+    color: rgb(var(--prime));
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+#search>.search::part(field) {
+    padding: .15rem 0;
+}
