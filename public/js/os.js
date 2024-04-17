@@ -2853,6 +2853,7 @@ OS.Component.Password = (function() {
                         case "label":
                         case "disabled":
                             this.emit("change:" + name, { data: newValue });
+                            break;
                         case "value":
                             this.refs.field.value = newValue;
                             this.ctl.setFormValue(newValue ? newValue : null);
