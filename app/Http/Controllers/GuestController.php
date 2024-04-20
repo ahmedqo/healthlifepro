@@ -41,6 +41,8 @@ class GuestController extends Controller
     public function details_view(Request $Request, $slug)
     {
         $data = Product::with('Images')->where('slug', $slug)->first();
+        if (!$data) abort(404);
+
         Core::views($data->id);
 
         $row = [

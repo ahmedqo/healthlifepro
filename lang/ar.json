@@ -240,5 +240,8 @@
     "Catalogs List": "قائمة الفهارس",
     "New Catalog": "فهرس جديد",
     "Edit Catalog": "تحديث الفهرس",
-    "Document": "الوثيقة"
+    "Document": "الوثيقة",
+
+    "Page Not Found": "الصفحة غير موجودة",
+    "Something Went Wrong": "هناك خطأ ما"
 }
